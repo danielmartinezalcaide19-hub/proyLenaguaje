@@ -3,9 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Lenguaje</title>
+    <title>TrendFlip | Compra y vende ropa de segunda mano</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
+
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="Logotipo de TrendFlip" class="logo">
+            <div class="brand">
+                <h1>TrendFlip</h1>
+                <p class="eslogan">Dale una segunda vida a tu armario. Moda sostenible.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Explorar</a></li>
+            <li><a href="#subir-prenda">Vender Ropa</a></li>
+            <li><a href="#tarifas-envio">Envíos</a></li>
+            <li><a href="#consejos">Soporte</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-principal">
+        
+        <section class="catalogo">
+            <h2>Novedades de la comunidad</h2>
+            <p>Descubre las últimas prendas subidas por los usuarios:</p>
+
+            <div class="grid-prendas">
+                <article class="tarjeta-prenda">
+                    <img src="img/chaqueta.jpg" alt="Chaqueta vaquera vintage oversize">
+                    <div class="info-prenda">
+                        <h3>Chaqueta Vaquera</h3>
+                        <p class="talla">Talla: L / Estado: Muy bueno</p>
+                        <p class="precio">18,50 €</p>
+                        <a href="#" class="btn-comprar">Comprar ya</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-prenda">
+                    <img src="img/zapatillas.jpg" alt="Zapatillas deportivas blancas clásicas">
+                    <div class="info-prenda">
+                        <h3>Zapatillas Retro</h3>
+                        <p class="talla">Talla: 41 / Estado: Reluciente</p>
+                        <p class="precio">32,00 €</p>
+                        <a href="#" class="btn-comprar">Comprar ya</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="tarifas-envio" class="seccion-envios">
+            <h2>Tarifas de Envío</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tamaño Paquete</th>
+                        <th>Ejemplo</th>
+                        <th>Coste Envío</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pequeño</td>
+                        <td>Camisetas, tops, accesorios</td>
+                        <td>2,49 €</td>
+                    </tr>
+                    <tr>
+                        <td>Mediano</td>
+                        <td>Pantalones, vestidos, jerseys</td>
+                        <td>3,99 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="subir-prenda" class="seccion-formulario">
+            <h2>¿Quieres vender algo? ¡Súbelo gratis!</h2>
+            <form action="#" method="POST" class="form-vender">
+                <div class="grupo-form">
+                    <label for="titulo">Título del artículo:</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ej: Camisa lino blanca Zara" required>
+                </div>
+                <div class="grupo-form">
+                    <label for="correo">Tu correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="grupo-form">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecciona...</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Publicar Artículo</button>
+            </form>
+        </section>
+
+    </main>
+
+    <aside id="consejos" class="barra-lateral">
+        <h3>Consejos de Seguridad</h3>
+        <ul>
+            <li>Lava la ropa antes de realizar el envío.</li>
+            <li>Usa siempre el sistema de seguimiento de envíos.</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 TrendFlip S.L. Hecho con fines educativos.</p>
+    </footer>
+
 </body>
 </html>
