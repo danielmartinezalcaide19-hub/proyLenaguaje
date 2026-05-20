@@ -1,0 +1,263 @@
+/* ==========================================
+   1. ESTILOS GENERALES (Fondo y Tipografía)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color gris claro de fondo */
+    color: #2b2b2b;
+}
+
+/* ==========================================
+   2. ENCABEZADO (Header)
+   ========================================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Estilo para el logotipo */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px; /* Logo redondo */
+}
+
+header h1 {
+    margin: 0;
+    color: #097969; /* Verde corporativo estilo Vinted */
+    font-size: 2rem;
+}
+
+.eslogan {
+    margin: 5px 0 0 0;
+    color: #6c757d;
+}
+
+/* ==========================================
+   3. MENÚ DE NAVEGACIÓN (Nav)
+   ========================================== */
+nav {
+    background-color: #097969;
+    position: sticky; /* Se queda fijo arriba al hacer scroll */
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox obligatorio */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover obligatorio en el menú */
+nav ul li a:hover {
+    background-color: #06544a;
+}
+
+/* ==========================================
+   4. DISTRIBUCIÓN DEL CONTENIDO (Main y Grid)
+   ========================================== */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Cuadrícula para mostrar la ropa */
+.grid-prendas {
+    display: grid; /* CSS Grid obligatorio */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   5. TARJETAS DE ROPA (Articles con bordes y sombras)
+   ========================================== */
+.tarjeta-prenda {
+    background-color: white;
+    border: 1px solid #e9ecef; /* Bordes */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-prenda img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Hace que la foto encaje perfectamente */
+    background-color: #eaeaea; /* Fondo gris por si no encuentra la imagen */
+}
+
+.info-prenda {
+    padding: 15px;
+}
+
+.info-prenda h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #097969;
+    margin: 10px 0;
+}
+
+.talla {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Botón de compra rápido */
+.btn-comprar {
+    display: block;
+    text-align: center;
+    background-color: #097969;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Efecto Hover obligatorio: la tarjeta se eleva y destaca */
+.tarjeta-prenda:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   6. TABLA ESTILIZADA
+   ========================================== */
+.seccion-envios {
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background-color: #e6f2f0;
+    color: #097969;
+    font-weight: bold;
+}
+
+/* Pseudoclase nth-child obligatoria (filas alternas) */
+tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+/* ==========================================
+   7. FORMULARIO MODERNO
+   ========================================== */
+.seccion-formulario {
+    margin-top: 50px;
+}
+
+.form-vender {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+}
+
+.grupo-form {
+    margin-bottom: 20px;
+}
+
+.grupo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.grupo-form input, 
+.grupo-form select, 
+.grupo-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Botón del formulario */
+.btn-enviar {
+    background-color: #097969;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #06544a;
+}
+
+/* ==========================================
+   8. BARRA LATERAL (Aside) Y PIE (Footer)
+   ========================================== */
+.barra-lateral {
+    background-color: #eef7f5;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 50px;
+    border-left: 5px solid #097969;
+}
+
+footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+}
