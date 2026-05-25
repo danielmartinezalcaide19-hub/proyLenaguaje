@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
+    <title>ReWear-Contáctanos</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    
+    <header>
+        <div class ="header_marca">
+            <img src="img/logo.png" alt="Logotipo de ReWear" width="150">
+            <div>
+                <h1 class="nombre">ReWear</h1>
+                <div class="eslogan">Ropa que vuelve a tener historia</div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+            <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+            <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contactanos</h2>
+            <p>¿Tienes dudas con alguna prenda, quieres vender tu ropa o has tenido algún problema con tu pedido? Rellena este formulario y te responderemos en menos de 24 horas.</p>
+            
+            <form action="#" method="POST">
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>  
+                </div>
+
+                <div>
+                    <label for="motivo">Motivo de tu consulta:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona una opcion</option>
+                        <option value="duda">Duda con una talla o prenda</option>
+                        <option value="vender">Quiero vender mi ropa</option>
+                        <option value="pedido">Problema con un envio</option> 
+                        <option value="otros">Otros motivos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar formulario</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 ReWear - Proyecto de Lenguajes de Marcas. Creado por Daniel, Jorge y Julián.</p>
+    </footer>
 </body>
 </html>
